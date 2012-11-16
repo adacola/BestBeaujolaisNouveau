@@ -80,3 +80,6 @@ let bestBeaujolaisNouveau() =
             | Equal -> year::maxYears, vagueYears
             | Vague -> maxYears, year::vagueYears)
     List.sort maxYears, List.sort vagueYears
+
+let maxYears, vagusYears = bestBeaujolaisNouveau()
+printfn "最も出来が良い年は %A 、判別不能な年は %A" maxYears vagusYears
